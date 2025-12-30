@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, easeIn } from 'motion/react';
 import { type ReceivedChatMessage } from '@livekit/components-react';
 import { ShimmerText } from '@/components/livekit/shimmer-text';
 import { cn } from '@/lib/utils';
@@ -12,7 +12,7 @@ const VIEW_MOTION_PROPS = {
     visible: {
       opacity: 1,
       transition: {
-        ease: 'easeIn',
+        ease: easeIn,
         duration: 0.5,
         delay: 0.8,
       },
@@ -20,7 +20,7 @@ const VIEW_MOTION_PROPS = {
     hidden: {
       opacity: 0,
       transition: {
-        ease: 'easeIn',
+        ease: easeIn,
         duration: 0.5,
         delay: 0,
       },
